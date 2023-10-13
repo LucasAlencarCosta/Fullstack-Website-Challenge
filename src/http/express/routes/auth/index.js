@@ -13,3 +13,5 @@ router.use(validateNotLoggedIn);
 
 router.use("/login", loginRoutes);
 router.use("/register", registerRoutes);
+
+module.exports = router;

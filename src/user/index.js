@@ -8,6 +8,7 @@ const {
 } = require("./errors");
 const { GeneralError } = require("../http/errors");
 const { validatePassword } = require("../auth/encryption");
+const { encodeUserToken } = require("../auth/token")
 const { getUserByUsername, getUserByEmail } = require("../storage/users");
 /**
  * @param {RegisterUserPayload} payload
@@ -34,12 +35,11 @@ async function registerUser({ username, email, password, confirmPassword }) {
   }
 }
 
-async function loginUser({ username, password }) {
+async function loginUser( username, password ) {
   if (!username || !password) {
     throw new InvalidCredentialsErrors();
   }
   const isEmail = emailValidation(username);
-
   try {
     const user = isEmail
       ? await getUserByEmail(username)

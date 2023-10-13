@@ -29,8 +29,8 @@ function encodeUserToken(user) {
     delete user.password;
   }
   const json = JSON.stringify(user);
-  const token = jwt.sign(json, getJwtKey(), {
-    expiresIn: "1h",
+  const token = jwt.sign({json: json }, getJwtKey(), {
+    expiresIn: 3600,
   });
   return token;
 }

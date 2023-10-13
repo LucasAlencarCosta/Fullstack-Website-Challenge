@@ -1,6 +1,8 @@
 const cookies = require("cookie-parser");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
+const { decodeUserToken } = require("../../auth/token");
+const { getUserById } = require("../../storage/users");
 
 async function validateNotLoggedIn(req, res, next) {
   const token = req.cookies.token;

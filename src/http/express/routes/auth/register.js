@@ -1,6 +1,7 @@
 const express = require("express");
 
 const { frontPath } = require("../../../../path");
+const {registerUser} = require("../../../../user")
 
 const router = express.Router();
 
@@ -16,8 +17,9 @@ router.post("/", async (req, res, next) => {
 
   try {
     await registerUser({ username, email, password, confirmPassword });
-    return res.redirect("/auth/login?success");
+    return res.redirect("/auth/login");
   } catch (err) {
+    console.log(err)
     next();
   }
 });
