@@ -38,16 +38,22 @@ cd Fullstack-Website-Challenge
 2. Install dependencies:
 
 If you dont have nodemon installed global you will need to run it:
-```console
+```bash
 npm install --g nodemon
-````
+```
 And after that do:
 
-```console
+```bash
 npm install
-````
+```
 
-3. Run:
+3. Start DB:
+
+```bash
+npm db:start
+```
+
+4. Run:
 
 ```bash
 npm run dev
