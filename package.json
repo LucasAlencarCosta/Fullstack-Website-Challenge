@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev" : "nodemon src/",
+    "db:start" : "node src/storage/_startDatabase.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Alencar Costa",
