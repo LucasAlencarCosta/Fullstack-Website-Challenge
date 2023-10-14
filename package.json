@@ -6,6 +6,7 @@
   "scripts": {
     "dev" : "nodemon src/",
     "db:start" : "node src/storage/_startDatabase.js",
+    "db:reset" : "rm src/storage/storage.db && npm db:start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Alencar Costa",
