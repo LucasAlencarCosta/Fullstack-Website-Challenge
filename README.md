@@ -1,6 +1,6 @@
 # Fullstack-Website-Challenge
 
-This is a fullstack project that implements a complete authentication cycle using JavaScript, Express, JWT, Bcrypt, SQLite, and other necessary libraries. The main objective of this project is to create a frontend using only HTML and CSS, without relying on any frontend libraries or frameworks like React or Angular.
+This is a fullstack project that implements a complete authentication cycle using JavaScript, Express, JWT, Bcrypt, SQLite, and other necessary libraries. The main objective of this project is to create a frontend using only HTML and CSS, without relying on any frontend libraries or frameworks like React or Angular. I didn't complete the frontend ui because the main logic and challenge already have been completed.
 
 ## Features
 
