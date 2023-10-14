@@ -32,7 +32,7 @@ This is a fullstack project that implements a complete authentication cycle usin
 
 ```bash
 git clone git@github.com:LucasAlencarCosta/Fullstack-Website-Challenge.git
-cd fullstack-auth-project
+cd Fullstack-Website-Challenge
 ```
 
 2. Install dependencies:
