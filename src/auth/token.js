@@ -28,9 +28,8 @@ function encodeUserToken(user) {
   if (user.password) {
     delete user.password;
   }
-  const json = JSON.stringify(user);
-  const token = jwt.sign({json: json }, getJwtKey(), {
-    expiresIn: 3600,
+  const token = jwt.sign(user, getJwtKey(), {
+    expiresIn: '1d',
   });
   return token;
 }
@@ -45,7 +44,7 @@ function decodeUserToken(token) {
   }
   try {
     const jsonDecoded = jwt.verify(token, getJwtKey());
-    return JSON.parse(jsonDecoded);
+    return jsonDecoded;
   } catch (err) {
     return undefined;
   }
